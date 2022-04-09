@@ -1,8 +1,7 @@
 require('dotenv/config');
 import { app, httpServer, server } from './app';
 
-const PORT = 4000;
-
+const PORT = process.env.PORT || 4000;
 const runServer = async () => {
   await server.start();
   server.applyMiddleware({ app });
